@@ -3,7 +3,7 @@
     <!-- A JPA Persistence Unit -->
     <persistence-unit name="myJPAunit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class></class>
+        <class>com.rpontello.app.entity.MyEntity</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <!-- SQL stuff -->
@@ -18,9 +18,9 @@
             <property name="hibernate.hikari.maximumPoolSize" value="100" />
             <property name="hibernate.hikari.idleTimeout" value="30000" />
             <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource" />
-            <property name="hibernate.hikari.dataSource.url" value="jdbc:postgresql://192.168.100.75:5432/mpDb" />
-            <property name="hibernate.hikari.username" value="cowboy" />
-            <property name="hibernate.hikari.password" value="bebop" />
+            <property name="hibernate.hikari.dataSource.url" value="jdbc:postgresql://127.0.0.1:5432/database" />
+            <property name="hibernate.hikari.username" value="postgres" />
+            <property name="hibernate.hikari.password" value="postgres" />
 
             <!-- Disable the second-level cache  -->
             <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
